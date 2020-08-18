@@ -13,7 +13,7 @@ The Default_View shows the forms and the various clearance screens.
 The Admin_View is a copy of our current List_View from the larger Centre_View_Portlet we've been developing, but ultimately, they decided to not use it.
 I've included the Admin_View as well as the webservices for it just to show what we are doing.  I've included a screen shot of the List_View for the 
 Study Abroad process which also utilizes the Form_able Interface just to show you what it looks like for larger projects.  I've also included the 
-Study Abroad Flow Form_Able file which is unrelated to this project.
+Study Abroad Form_Able file which is unrelated to this project.
 
 <a href="https://imgur.com/c0cHfYS">Form View</a>
 
