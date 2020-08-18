@@ -341,34 +341,7 @@ namespace CNTRCovidForm.Views
                 ParentPortlet.NextScreen("Objectable_View");
             }
         }
-        [WebMethod]
-        public void test_edit_Clicked(int row)
-        {
-           
-            int data = Convert.ToInt32(hf_Selected_Object.Value);
-            List_able listObj = current_Viewable.returnListable();
-            List<string> variables = listObj.get_iterable_List()[row].getListOfKeys();
-            List<string> types = listObj.get_iterable_List()[row].getListofTypes();
-            Session["formable"] = master_Forms_List[data];
-            if (Convert.ToInt32(hf_Selected_Object.Value).Equals(0))
-            {
-                Session["form_Obj"] = new List<Abstract_Iter_able> { listObj.get_iterable_List()[row] };
-                Session["viewableType"] = master_Forms_List[data].Name;
-                Session["viewDesired"] = "Edit";               
-                HttpContext.Current.Response.Write("{}");
-                ParentPortlet.NextScreen("Objectable_View");
-            }
-            else
-            {
-                Session["form_Obj"] = new List<Abstract_Iter_able> { listObj.get_iterable_List()[row] };
-                Session["viewableType"] = master_Forms_List[data].Name;
-                Session["viewDesired"] = "Edit";
-                HttpContext.Current.Response.Write("{}");
-                ParentPortlet.NextScreen("Objectable_View");
-            }
-            HttpContext.Current.Response.Write("{}");
-        }
-
+        
         private void review_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
@@ -435,22 +408,7 @@ namespace CNTRCovidForm.Views
             Session["eval_Obj"] = submission;
             ParentPortlet.NextScreen("Objectable_View");
         }
-
-        private void remove(GridViewRow row)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void add_clicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void submit_Clicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         private void delete_Clicked(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
